@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+
+if [ ! $(which node) ]; then
+    echo 'Please install nodejs package'
+    exit 1
+fi
+
+if [ ! $(which npm) ]; then
+    echo 'Please install npm package'
+    exit 1
+fi
+
+if (( $EUID != 0 )); then
+    echo "Please run as root"
+    exit 1
+fi
+
+
+cp kdevice-gabbler.service /lib/systemd/system/
+
+
+cp -r kdevice-gabbler /opt/kdevice-gabbler
+cd /opt/kdevice-gabbler
+npm install 
+
+
+
+systemctl enable kdevice-gabbler.service
+systemctl start kdevice-gabbler.service
+
+
+echo "Done installing kdevice-gabbler"
+exit 0

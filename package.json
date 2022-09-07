@@ -1,0 +1,16 @@
+{
+    "name": "kdevice-gabbler",
+    "version": "1.0.0",
+    "description": "",
+    "main": "kdevice-gabbler.js",
+    "scripts": {
+        "start": "node kdevice-gabbler.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.1",
+        "expressjs": "^1.0.1"
+    }
+}
