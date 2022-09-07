@@ -1,19 +1,11 @@
 'use strict';
 const { networkInterfaces, hostname } = require('os');
-
-
-var os = require("os");
 const nets = networkInterfaces();
-
-
-
-
+const host = hostname();
 const express = require('express');
 const { json } = require('express/lib/response');
 const app = express()
 const port = 7777
-
-
 
 app.get('/', (req, res) => {
     const interfaces = Object.create(null); // Or just '{}', an empty object
@@ -26,16 +18,12 @@ app.get('/', (req, res) => {
                 if (!interfaces[name]) {
                     interfaces[name] = {};
                 }
-
-
                 interfaces[name][net.mac] = net.address
-
             }
         }
     }
-
     res.json({
-        "hostname": hostname(),
+        "hostname": host,
         "netinterfaces": interfaces
     })
 })
