@@ -3,11 +3,13 @@
 
 if [ ! $(which node) ]; then
     echo 'Please install nodejs package'
+    sudo apt install nodejs
     exit 1
 fi
 
 if [ ! $(which npm) ]; then
     echo 'Please install npm package'
+    sudo apt install npm
     exit 1
 fi
 
