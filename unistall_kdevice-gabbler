@@ -9,7 +9,7 @@ if (( $EUID != 0 )); then
 fi
 
 systemctl stop kdevice-gabbler.service
-systemctl kdevice-gabbler.service
+systemctl disable kdevice-gabbler.service
 
 rm -f /lib/systemd/system/kdevice-gabbler.service
 
