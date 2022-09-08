@@ -22,7 +22,8 @@ app.get('/', (req, res) => {
             }
         }
     }
-    res.setHeader('Content-Type', 'application/json').json({
+    res.setHeader('Content-Type', 'application/json')
+    res.json({
         "hostname": host,
         "netinterfaces": interfaces
     })
