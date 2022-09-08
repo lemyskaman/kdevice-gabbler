@@ -21,8 +21,9 @@ fi
 
 cp kdevice-gabbler.service /lib/systemd/system/
 
-
-cp -r kdevice-gabbler /opt/kdevice-gabbler
+mkdir /opt/kdevice-gabbler 
+cp -r kdevice-gabbler.js /opt/kdevice-gabbler/kdevice-gabbler.js
+cp -r package.json /opt/kdevice-gabbler/package.json
 cd /opt/kdevice-gabbler
 npm install 
 
