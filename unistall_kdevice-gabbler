@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+
+
+
+if (( $EUID != 0 )); then
+    echo "Please run as root"
+    exit 1
+fi
+
+systemctl stop kdevice-gabbler.service
+systemctl kdevice-gabbler.service
+
+rm -f /lib/systemd/system/kdevice-gabbler.service
+
+rm -r -f /opt/kdevice-gabbler 
+
+
+
+echo "Done un-installing kdevice-gabbler"
+exit 0
