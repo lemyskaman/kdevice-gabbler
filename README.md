@@ -1,6 +1,9 @@
 # kdevice-gabbler
 
-A small http service that expose a device hardware info in json
+A small http service that exposes to local network hardware info as json
+
+When installed this program will start a expressjs http service with just one route, that retuns some hardware information: 
+
 
 
 ### Just:
