@@ -1,6 +1,6 @@
 # kdevice-gabbler
 
-A small http service that exposes to local network hardware info as json
+A small http service that exposes to local network the ip and mac of a device
 
 This program will start a expressjs http service, that retuns some hardware information when a request is made to the local ip of the device that runs it.
 
