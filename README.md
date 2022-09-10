@@ -44,4 +44,10 @@ or
 
 
 ### Installing as a Service
-Lets say you want this program to runs every time your device boots up 
+Lets say you want this program to runs every time your device boots up, the most common way to achive that would be to create a service  if you are using Debian or debian based distro you can run the next install_kdevice-gabbler bash script as root.
+
+    $ ./install_kdevice-gabbler 
+
+Every time you want to roll back all of what the above script did on your machine you can run uninstall_kdevice-gabbler.
+
+    $ ./uinstall_kdevice-gabbler
